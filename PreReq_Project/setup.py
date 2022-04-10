@@ -7,7 +7,7 @@ import sys
 
 # check the dataset is inside files 
 
-datapath = 'data/'
+datapath = ''
 if os.path.isdir(datapath): 
     required_files = ["Pre_Req.csv"]
     for file in required_files:
