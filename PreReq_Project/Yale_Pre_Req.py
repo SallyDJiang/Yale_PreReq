@@ -2,7 +2,10 @@ import streamlit as st
 from setup import * 
 
 # insert path to pre-req dataset
-pre_req_data = pd.read_csv("Pre_Req.csv")
+try: 
+    pre_req_data = pd.read_csv("Pre_Req.csv")
+except FileNotFoundError: 
+    pre_req_data = st.file_uploader('Upload the Pre-Req csv')
 
 # Streamlit Heading 
 st.title('Yale Interactive Prerequisite Dataset')
